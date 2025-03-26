@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Asistencia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Confirma tu asistencia</h2>
+    <form action="URL_DEL_PROCESAMIENTO" method="POST">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+
+        <label for="asistencia">¿Asistirás?</label>
+        <select id="asistencia" name="asistencia" required>
+            <option value="Sí">Sí, estaré ahí</option>
+            <option value="No">No podré asistir</option>
+        </select>
+
+        <label for="invitados">Número de invitados (incluyéndote):</label>
+        <input type="number" id="invitados" name="invitados" min="1" max="4" required>
+
+        <button type="submit">Confirmar asistencia</button>
+    </form>
+</div>
+
+</body>
+</html>
