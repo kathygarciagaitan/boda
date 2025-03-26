@@ -62,7 +62,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)),url('fotos/fondo.png') center/cover;
+	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)),url('fotos/fondo.png') center/cover;
 
 	.invitacion {
 		align-self: center;
@@ -70,6 +70,7 @@ body {
 		padding-bottom: 1rem;
 		margin-top: 40px;
 		font-size: 1.2rem;
+		text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 	}
 
 	.encabezado {
