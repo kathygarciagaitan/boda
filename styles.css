@@ -54,7 +54,7 @@ body {
 
 .columna-izquierda {
 	position: relative;
-	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	border-radius: 20px 0 0 20px;
 }
 /* Columna Derecha */
 .columna-derecha {
@@ -71,12 +71,10 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2)),url('fotos/fondo.png') center/cover;
+	border-radius: 20px 0 0 0;
 
 	.invitacion {
-		align-self: center;
-		flex-grow: 0;
-		padding-bottom: 1rem;
-		margin-top: 40px;
+		margin: 40px;
 		font-size: 1.2rem;
 		text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 	}
@@ -97,13 +95,12 @@ body {
 			font-size: 3.5rem;
 			padding: 10px;
 			font-weight: 600;
-			color: white;
 			text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 
 			.pareja1 {
 				align-self: start;
 				margin: 0;
-				line-height: 0.5;
+				line-height: 0.8;
 			}
 
 			.pareja2 {
@@ -124,14 +121,7 @@ body {
 			gap: 0.8rem;
 			padding-top: 1rem;
 
-			.fecha {
-				font-family: var(--font-secundario);
-				font-size: var(--width-texto);
-				font-weight: 400;
-				letter-spacing: 1px;
-			}
-
-			.hora {
+			.fecha, .hora  {
 				font-family: var(--font-secundario);
 				font-size: var(--width-texto);
 				font-weight: 400;
@@ -142,13 +132,15 @@ body {
 
 }
 
-
+.contenido {
+	padding: 20px;
+	text-align: center;
+}
 
 .bienvenida {
 	font-family: var(--font-secundario);
 	font-size: var(--width-titulo2);
 	margin: 20px 0;
-	text-align: center;
 	color: var(--color-opcion2);
 }
 
@@ -267,6 +259,23 @@ body {
 	margin-top: 20px;
 	font-size: 0.9rem;
 	border: none;
+	cursor: pointer;
+}
+
+.borde-rasgado {
+	height: 20px;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath d='M0,0v100h1000V0c0,0-136.5,73.5-250,73.5S500,0,500,0S363.5,73.5,250,73.5S0,0,0,0z'/%3E%3C/svg%3E");
+	mask-size: cover;
+	mask-position: bottom;
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath d='M0,0v100h1000V0c0,0-136.5,73.5-250,73.5S500,0,500,0S363.5,73.5,250,73.5S0,0,0,0z'/%3E%3C/svg%3E");
+	-webkit-mask-size: cover;
+	-webkit-mask-position: bottom;
+	border-radius: 0 0 0 20px;
 }
 
 .codigo-vestimenta {
@@ -342,6 +351,7 @@ body {
 	margin-top: 20px;
 	font-size: 0.9rem;
 	border: none;
+	cursor: pointer;
 }
 
 .pie-pagina {
@@ -358,29 +368,21 @@ body {
 	border-radius: 10px;
 }
 
-.borde-rasgado {
-	height: 20px;
-	background-color: white;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath d='M0,0v100h1000V0c0,0-136.5,73.5-250,73.5S500,0,500,0S363.5,73.5,250,73.5S0,0,0,0z'/%3E%3C/svg%3E");
-	mask-size: cover;
-	mask-position: bottom;
-	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100'%3E%3Cpath d='M0,0v100h1000V0c0,0-136.5,73.5-250,73.5S500,0,500,0S363.5,73.5,250,73.5S0,0,0,0z'/%3E%3C/svg%3E");
-	-webkit-mask-size: cover;
-	-webkit-mask-position: bottom;
-}
-
 
 @media (max-width: 768px) {
+	body {
+		padding: 0;
+	}
+
 	.contenedor {
 		flex-direction: column;
+		align-items: center;
 	}
 
 	.presentacion {
 		height: calc(100dvh - 20px);
+		border-radius: 0;
+		padding: 10px;
 
 		.encabezado {
 			.nombres-pareja {
@@ -389,16 +391,14 @@ body {
 		}
 	}
 
+	.segunda-imagen {
+		height: 140px;
+	}
+
 	.columna-izquierda, .columna-derecha {
 		width: 100%;
 		border-radius: 0;
-	}
-
-	.columna-izquierda {
 		padding: 0;
 	}
 
-	.columna-derecha {
-		border-radius: 0 0 20px 20px;
-	}
 }
