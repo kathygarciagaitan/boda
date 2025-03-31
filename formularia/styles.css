@@ -1,57 +1,86 @@
 :root {
-	--color-principal: #cab69e;
-	--color-titula-cafe: #d4af7a;
-	--color-opcion2: #0b5345;
-	--color-background: color-mix(in srgb, var(--color-principal) 78%, #fff);
-	--font-secundario: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+    --color-principal: #cab69e;
+    --color-titula-cafe: #d4af7a;
+    --color-titula-cafe-disabled: #fbd9a9;
+    --color-opcion2: #0b5345;
+    --color-background: color-mix(in srgb, var(--color-principal) 78%, #fff);
+    --font-secundario: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
 }
 
 
 body {
-	font-family: var(--font-secundario);
-	background-color: var(--color-background);
-	text-align: center;
-	padding: 20px;
-	box-sizing: border-box;
+    font-family: var(--font-secundario);
+    background-color: var(--color-background);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .form-container {
-	max-width: 400px;
-	margin: auto;
-	background: white;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    form {
+
+        button {
+            background-color: var(--color-titula-cafe);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: var(--font-secundario);
+        }
+
+        button:hover {
+            background-color: var(--color-opcion2);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: var(--font-secundario);
+            box-sizing: border-box;
+            background-color: #fff;
+
+            &:not(:focus) {
+                &:invalid {
+                    border: 1px solid red;
+                }
+
+                &:valid {
+                    border: 1px solid #ccc;
+                }
+            }
+
+            &:focus {
+                border: 1px solid #ccc;
+            }
+        }
+    }
+
+    form:invalid {
+        button[type="submit"] {
+            background-color: var(--color-titula-cafe-disabled);
+            cursor: not-allowed;
+        }
+    }
 }
+
 h2 {
-	color: var(--color-titula-cafe);
-}
-input, select {
-	width: 100%;
-	padding: 10px;
-	margin: 10px 0;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	font-family: var(--font-secundario);
-	box-sizing: border-box;
-}
-button {
-	background-color: var(--color-titula-cafe);
-	color: white;
-	padding: 10px 15px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
-	font-family: var(--font-secundario);
-}
-button:hover {
-	background-color: var(--color-opcion2);
+    color: var(--color-titula-cafe);
 }

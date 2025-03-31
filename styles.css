@@ -32,8 +32,7 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	padding: 20px;
-
-
+    font-size: 100%;
 }
 
 .contenedor {
@@ -378,7 +377,8 @@ body {
 	}
 
 	.presentacion {
-		height: calc(100dvh - 20px);
+		height: calc(100vh - 20px);
+		height: calc(100svh - 20px);
 		border-radius: 0;
 		padding: 10px;
 

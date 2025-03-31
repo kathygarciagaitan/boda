@@ -13,8 +13,10 @@
     <h2>Confirma tu asistencia</h2>
     <form action="URL_DEL_PROCESAMIENTO" method="POST">
         <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre" minlength="3" pattern="[\p{Letter}\p{Mark}].*" required>
 
+        <label for="cel">Celular:</label>
+        <input type="tel" id="cel" name="cel" minlength="7" required>
 
         <label for="asistencia">¿Asistirás?</label>
         <select id="asistencia" name="asistencia" required>
@@ -23,7 +25,12 @@
         </select>
 
         <label for="invitados">Número de invitados (incluyéndote):</label>
-        <input type="number" id="invitados" name="invitados" min="1" max="4" required>
+        <select id="invitados" name="invitados" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
 
         <button type="submit">Confirmar asistencia</button>
     </form>
