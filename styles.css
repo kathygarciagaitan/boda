@@ -398,6 +398,10 @@ body {
 		padding: 0;
 	}
 
+	.borde-rasgado {
+		border-radius: 0;
+	}
+
 }
 
 @media (max-width: 480px) {
