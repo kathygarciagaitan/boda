@@ -402,3 +402,9 @@ body {
 	}
 
 }
+
+@media (max-width: 480px) {
+	.nombres-pareja {
+		font-size: var(--width-texto2);
+	}
+}
