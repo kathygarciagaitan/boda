@@ -75,7 +75,10 @@ body {
     .invitacion {
         margin: 40px;
         font-size: 1.2rem;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        text-shadow:
+                0 0 2px rgba(0, 0, 0, 0.5),
+                0 0 4px rgba(0, 0, 0, 0.3),
+                0 0 15px rgba(0, 0, 0, 0.8);
     }
 
     .encabezado {
@@ -94,9 +97,10 @@ body {
             font-weight: 600;
 
             h2 {
-                text-shadow: 0 0 1px rgba(0, 0, 0, 0.5),
-                0 0 3px rgba(0, 0, 0, 0.3),
-                0 0 5px rgba(0, 0, 0, 0.2);
+                text-shadow:
+                        0 0 2px rgba(0, 0, 0, 0.5),
+                        0 0 4px rgba(0, 0, 0, 0.3),
+                        0 0 15px rgba(0, 0, 0, 0.8);
             }
 
             .pareja1 {
@@ -131,9 +135,9 @@ body {
 
                 text-shadow:
                        0 0 1px rgba(0, 0, 0, 0.9),
-                       0 0 2px rgba(0, 0, 0, 0.8),
-                       0 0 4px rgba(0, 0, 0, 0.7),
-                       0 0 12px rgba(0, 0, 0, 0.6);
+                       0 0 2px rgba(0, 0, 0, 0.5),
+                       0 0 4px rgba(0, 0, 0, 0.3),
+                       0 0 15px rgba(0, 0, 0, 0.8);
 
             }
         }
